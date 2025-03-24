@@ -1,0 +1,22 @@
+2 123 345 2.0067 3.009
+3 123 45 1.09 2.45
+4
+5
+--------------
+
+
+
+
+
+
+#steps: 
+
+set terminal pdf
+set output "Anas.pdf"
+set title "PtoP and Bus topology"
+set xlabel "Nodes"
+set ylabel "time delay"
+plot "aaa.txt" using 1: 5 with linespoint title "LAN" lw 4
+
+command : ns-3.32$ gnuplot second.plt
+

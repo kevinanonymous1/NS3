@@ -1,0 +1,19 @@
+20 1 10080 4480 0.444444444444444 0.711796246648794
+100 1 177457 36594 0.206213336188485 0.427518656716418
+200 1 615864 107739 0.174939597053895 0.307852186936455
+300 1 1264802 195851 0.154847161848258 0.264189805352033
+400 3 2036278 2546480.125055616178145 0.218597530952615
+500 3 3142241 341094 0.108551190058306 0.193741027075484
+
+
+
+#step:
+set terminal png
+set output "Lalit.png"
+set title "Point to Point Toplogy end to end delay"
+set xlabel "nodes"
+set ylabel "end to end delay"
+plot "data.txt" using 1: 5 with linespoint title "TimeDelay" lw 4,"data.txt" using 1: 6
+with linespoint title "DBR " lw 2
+
+command : gnuplot gplot.plt

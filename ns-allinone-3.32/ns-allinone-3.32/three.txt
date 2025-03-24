@@ -1,0 +1,12 @@
+1 10 300 400 0.0045 0.0056
+10 123 100 340 00.67 0.65
+15 121 88 999 0.78 0.45
+
+
+#steps: 
+set terminal pdf
+2 set output "Belesh.pdf"
+3 set title " Vikram Demo NS3 Lecture Graph"
+4 set xlabel "nodes"
+5 set ylabel "Time to Live"
+6 plot "Vikram. txt" using 1: 5 with linespoint title "TimeDelay" 1w 4
